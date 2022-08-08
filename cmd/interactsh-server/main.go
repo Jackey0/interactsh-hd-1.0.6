@@ -97,8 +97,13 @@ func main() {
 		}
 	}
 
-	if len(cliOptions.Domains) == 0 {
+	/*jackey0注释*/
+	/*if len(cliOptions.Domains) == 0 {
 		gologger.Fatal().Msgf("No domains specified\n")
+	}*/
+	/*jackey0添加-----------------------------*/
+	if len(cliOptions.Domains) == 0 {
+		cliOptions.Domains = append(cliOptions.Domains, "test.test")
 	}
 
 	if cliOptions.IPAddress == "" && cliOptions.ListenIP == "0.0.0.0" {
